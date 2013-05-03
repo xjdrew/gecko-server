@@ -8,7 +8,7 @@ ca_folder = 'ca'
 app.config["PRIVATE_KEY"] = os.path.join(ca_folder, 'wodaole.key')
 app.config["SIGNER"] = os.path.join(ca_folder, 'wodaole.crt')
 app.config["CERTIFICATE"] = os.path.join(ca_folder, "PositiveSSLCA2.crt")
-app.config["MC_NAME"] = "wodaole-vpn.mobileconfig"
+app.config["MC_NAME"] = "gecko"
 app.config["MC_IDENTIFIER"] = "com.wodaole.vpn"
 
 assert os.path.exists(app.config["PRIVATE_KEY"])

@@ -12,10 +12,11 @@ servers = {
            2: dict(sid=2, user='test', password='youknonw', name="us-02", country="us", ip="www.yahoo.com", noping = 0),
            3: dict(sid=3, user='test', password='youknonw', name="us-03", country="us", ip="127.0.0.1", noping = 1),
            4: dict(sid=4, user='test', password='youknonw', name="us-04", country="us", ip="www.yahoo.com.jp", noping = 0),
-           5: dict(sid=5, user='test', password='youknonw', name="us-05", country="us", ip="www.youku.com", noping = 0),
+           5: dict(sid=5, user='test', password='youknonw', name="us-05-how-long-it-can-support-it-is-possible-to-show-completely", country="us", ip="www.youku.com", noping = 0),
            6: dict(sid=6, user='test', password='youknonw', name="hk-01", country="hk", ip="183.128.67.96", noping = 0),
            7: dict(sid=7, user='test', password='youknonw', name="hk-02", country="hk", ip="www.hulu.com", noping = 0),
            8: dict(sid=8, user='test', password='youknonw', name="cn-01", country="cn", ip="121.12.13.23", noping = 0),
+           9: dict(sid=9, user='3q3q3q3q', password='3q3q3q3q', name='korea-test-server-01', country="Korea", ip="210.181.96.55", noping=0),
         }
 
 def get_user(username):

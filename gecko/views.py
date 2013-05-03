@@ -59,11 +59,14 @@ def mobileconfig(user, token, param):
     sids = json.loads(base64.urlsafe_b64decode(param))
     logger.debug("mobileconfig: %s", str(sids))
 
-    with app.open_resource('signed.mobileconfig') as f:
-        resp = make_response(f.read())
-        # resp.headers['Content-type'] = 'application/octet-stream'
-        resp.headers['Content-type'] = 'application/x-apple-aspen-config; charset=utf-8'
-        resp.headers['Content-Disposition'] = 'attachment; filename="test.mobileconfig"'
+    configs = []
+    for sid in sids:
+        configs.append(dbhelper.get_server_config(sid))
+
+    mobileconfig = mc.get_mobileconfig(configs)
+    resp = make_response(mcsign.sign(mobileconfig))
+    resp.headers['Content-type'] = 'application/x-apple-aspen-config; charset=utf-8'
+    resp.headers['Content-Disposition'] = 'attachment; filename="%s.mobileconfig"' % app.config["MC_NAME"]
     return resp
 
 @app.route('/user/<int:sid>')
@@ -76,5 +79,5 @@ def mobileconfig_test(sid):
     mobileconfig = mc.get_mobileconfig(configs)
     resp = make_response(mcsign.sign(mobileconfig))
     resp.headers['Content-type'] = 'application/x-apple-aspen-config; charset=utf-8'
-    resp.headers['Content-Disposition'] = 'attachment; filename="test.mobileconfig"'
+    resp.headers['Content-Disposition'] = 'attachment; filename="%s.mobileconfig"' % app.config["MC_NAME"]
     return resp
