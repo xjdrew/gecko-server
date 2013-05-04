@@ -2,6 +2,10 @@
 import os
 from gecko import app
 
-app.debug = True
 
-app.run(host='0.0.0.0', port=8000)
+def main():
+    app.debug = True
+    app.run(host='0.0.0.0', port=8000)
+
+if __name__ == '__main__':
+    main()

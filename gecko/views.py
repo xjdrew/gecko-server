@@ -6,7 +6,6 @@ from gecko import app, logger
 from auth import auth
 import dbhelper, mcsign, mc
 
-
 def error_string(code):
     err_tbl = {}
     err_tbl[0] = "success"
@@ -24,14 +23,10 @@ def make_json_response(data, code=0):
 @app.route('/')
 def index():
     content = ''
-    public_crt = safe_join(app.config['CA_FOLDER'], 'wodaole.crt')
-    with open(public_crt) as f:
-        content = f.read()
-        
+
     r = dict(greeting='hello world',
              time=datetime.today().strftime("%Y-%m-%d %H:%M:%S"),
-             pwd=os.getcwd(),
-             signer = content)
+             pwd=os.getcwd())
     return make_json_response(r)
 
 
