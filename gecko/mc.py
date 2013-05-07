@@ -33,7 +33,7 @@ pptp_template = Template('''
     <key>PayloadDescription</key>
     <string>配置 VPN 设置（包括鉴定）。</string>
     <key>PayloadDisplayName</key>
-    <string>VPN (91vpn2)</string>
+    <string>$name</string>
     <key>PayloadIdentifier</key>
     <string>$identifier</string>
     <key>PayloadOrganization</key>
@@ -60,12 +60,68 @@ def get_pptp_config(config):
              ip=config['ip'],
              identifier="%s.%d" % (app.config["MC_IDENTIFIER"], config['sid']),
              uuid=str(uuid1()),
-             name=config['name'])
+             name="%s-l2tp" % config['name'])
     return pptp_template.substitute(d)
 
 
-def get_l2tp_config(name, user, password, token):
-    pass
+l2tp_template = Template('''  
+<dict>
+    <key>EAP</key>
+    <dict/>
+    <key>IPSec</key>
+    <dict>
+        <key>AuthenticationMethod</key>
+        <string>SharedSecret</string>
+        <key>SharedSecret</key>
+        <data>
+        $token
+        </data>
+    </dict>
+    <key>IPv4</key>
+    <dict>
+        <key>OverridePrimary</key>
+        <integer>1</integer>
+    </dict>
+    <key>PPP</key>
+    <dict>
+        <key>AuthName</key>
+        <string>$user</string>
+        <key>AuthPassword</key>
+        <string>$password</string>
+        <key>CommRemoteAddress</key>
+        <string>$ip</string>
+    </dict>
+    <key>PayloadDescription</key>
+    <string>配置 VPN 设置（包括鉴定）。</string>
+    <key>PayloadDisplayName</key>
+    <string>$name</string>
+    <key>PayloadIdentifier</key>
+    <string>$identifier</string>
+    <key>PayloadOrganization</key>
+    <string></string>
+    <key>PayloadType</key>
+    <string>com.apple.vpn.managed</string>
+    <key>PayloadUUID</key>
+    <string>$uuid</string>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+    <key>Proxies</key>
+    <dict/>
+    <key>UserDefinedName</key>
+    <string>$name</string>
+    <key>VPNType</key>
+    <string>L2TP</string>
+</dict>
+''')
+def get_l2tp_config(config):
+    d = dict(user=config['user'],
+             password=config['password'],
+             ip=config['ip'],
+             identifier="%s.%d" % (app.config["MC_IDENTIFIER"], config['sid']),
+             uuid=str(uuid1()),
+             name=config['name'],
+             token=config['token'])
+    return l2tp_template.substitute(d)
 
 
 mc_template = Template('''
@@ -104,7 +160,10 @@ def get_mobileconfig(configs):
 
     payloads = []
     for config in configs:
-        payloads.append(get_pptp_config(config))
+        if config.is_pptp():
+            payloads.append(get_pptp_config(config))
+        if config.is_l2tp():
+            payloads.append(get_l2tp_config(config))
 
     d = dict(name=app.config["MC_NAME"],
              identifier=app.config["MC_IDENTIFIER"],
