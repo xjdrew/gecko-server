@@ -1,4 +1,5 @@
 # coding: utf8
+from base64 import b64encode
 from string import Template
 from uuid import uuid1
 
@@ -60,7 +61,7 @@ def get_pptp_config(config):
              ip=config['ip'],
              identifier="%s.%d" % (app.config["MC_IDENTIFIER"], config['sid']),
              uuid=str(uuid1()),
-             name="%s-l2tp" % config['name'])
+             name=config['name'])
     return pptp_template.substitute(d)
 
 
@@ -119,8 +120,8 @@ def get_l2tp_config(config):
              ip=config['ip'],
              identifier="%s.%d" % (app.config["MC_IDENTIFIER"], config['sid']),
              uuid=str(uuid1()),
-             name=config['name'],
-             token=config['token'])
+             name="%s-l2tp" % config['name'],
+             token=b64encode(config['token']))
     return l2tp_template.substitute(d)
 
 
