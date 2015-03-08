@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/m2crypto/!svn/ver/738/tags/0.21.1/demo/ZopeX3/install_dir/lib/python/zope/server/http
+END
+https_server.py
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/m2crypto/!svn/ver/738/tags/0.21.1/demo/ZopeX3/install_dir/lib/python/zope/server/http/https_server.py
+END
+https_serverchannel.py
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/m2crypto/!svn/ver/738/tags/0.21.1/demo/ZopeX3/install_dir/lib/python/zope/server/http/https_serverchannel.py
+END
+publisherhttps_server.py
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/m2crypto/!svn/ver/738/tags/0.21.1/demo/ZopeX3/install_dir/lib/python/zope/server/http/publisherhttps_server.py
+END

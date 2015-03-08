@@ -1,7 +1,7 @@
-import time, base64, json, os
+import time, base64, json, os, httplib, urllib2
 from datetime import datetime
 
-from flask import make_response, safe_join, session
+from flask import make_response, safe_join, session, request
 from gecko import app, logger
 from auth import auth
 import dbhelper, mcsign, mc
@@ -76,3 +76,18 @@ def mobileconfig_test(sid):
     resp.headers['Content-type'] = 'application/x-apple-aspen-config; charset=utf-8'
     resp.headers['Content-Disposition'] = 'attachment; filename="%s.mobileconfig"' % app.config["MC_NAME"]
     return resp
+
+@app.route('/purchase', methods=['POST'])
+def purchase():
+    receipt = request.json['receipt']
+    logger.debug("receipt: %s", type(receipt))
+
+    req = {"receipt-data" : receipt}
+    data = json.dumps(req)
+
+    url = "https://sandbox.itunes.apple.com/verifyReceipt"
+    headers = {'Content-Type' : 'application/json'}
+    handler = urllib2.urlopen(url, data)
+    logger.debug("verify receipt code: %d", handler.code)
+    logger.debug("verify receipt: %s", handler.read())
+    return make_json_response('')

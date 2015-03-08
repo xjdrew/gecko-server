@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/m2crypto/!svn/ver/738/tags/0.21.1
+END
+LICENCE
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/m2crypto/!svn/ver/738/tags/0.21.1/LICENCE
+END
+pack.py
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/m2crypto/!svn/ver/738/tags/0.21.1/pack.py
+END
+INSTALL
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/m2crypto/!svn/ver/738/tags/0.21.1/INSTALL
+END
+epydoc.conf
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/m2crypto/!svn/ver/738/tags/0.21.1/epydoc.conf
+END
+setup.py
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/m2crypto/!svn/ver/738/tags/0.21.1/setup.py
+END
+CHANGES
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/m2crypto/!svn/ver/738/tags/0.21.1/CHANGES
+END
+fedora_setup.sh
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/m2crypto/!svn/ver/738/tags/0.21.1/fedora_setup.sh
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/m2crypto/!svn/ver/738/tags/0.21.1/README
+END
+setup.cfg
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/m2crypto/!svn/ver/738/tags/0.21.1/setup.cfg
+END

@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/m2crypto/!svn/ver/738/tags/0.21.1/demo/smime
+END
+client.p12
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/m2crypto/!svn/ver/738/tags/0.21.1/demo/smime/client.p12
+END
+opaque.p7
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/m2crypto/!svn/ver/738/tags/0.21.1/demo/smime/opaque.p7
+END
+client2.pem
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/m2crypto/!svn/ver/738/tags/0.21.1/demo/smime/client2.pem
+END
+ca.pem
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/m2crypto/!svn/ver/738/tags/0.21.1/demo/smime/ca.pem
+END
+unsmime.py
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/m2crypto/!svn/ver/738/tags/0.21.1/demo/smime/unsmime.py
+END
+ns.p7
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/m2crypto/!svn/ver/738/tags/0.21.1/demo/smime/ns.p7
+END
+test.py
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/m2crypto/!svn/ver/738/tags/0.21.1/demo/smime/test.py
+END
+m2.se.p7
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/m2crypto/!svn/ver/738/tags/0.21.1/demo/smime/m2.se.p7
+END
+clear.p7
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/m2crypto/!svn/ver/738/tags/0.21.1/demo/smime/clear.p7
+END
+ns.se.p7
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/m2crypto/!svn/ver/738/tags/0.21.1/demo/smime/ns.se.p7
+END
+sendsmime.py
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/m2crypto/!svn/ver/738/tags/0.21.1/demo/smime/sendsmime.py
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/m2crypto/!svn/ver/738/tags/0.21.1/demo/smime/README
+END
+client.pem
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/m2crypto/!svn/ver/738/tags/0.21.1/demo/smime/client.pem
+END

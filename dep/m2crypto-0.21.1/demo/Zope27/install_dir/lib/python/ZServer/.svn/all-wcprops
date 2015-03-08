@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/m2crypto/!svn/ver/738/tags/0.21.1/demo/Zope27/install_dir/lib/python/ZServer
+END
+HTTPS_Server.py
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/m2crypto/!svn/ver/738/tags/0.21.1/demo/Zope27/install_dir/lib/python/ZServer/HTTPS_Server.py
+END
+component.xml.patch
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/m2crypto/!svn/ver/738/tags/0.21.1/demo/Zope27/install_dir/lib/python/ZServer/component.xml.patch
+END
+datatypes.py.patch
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/m2crypto/!svn/ver/738/tags/0.21.1/demo/Zope27/install_dir/lib/python/ZServer/datatypes.py.patch
+END
+__init__.py.patch
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/m2crypto/!svn/ver/738/tags/0.21.1/demo/Zope27/install_dir/lib/python/ZServer/__init__.py.patch
+END

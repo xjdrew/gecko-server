@@ -1,2 +1,2 @@
-!#/usr/bin/bash
+#!/bin/bash
 uwsgi -d uwsgi.log uwsgi.ini
